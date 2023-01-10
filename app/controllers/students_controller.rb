@@ -12,5 +12,9 @@ class StudentsController < ApplicationController
         # byebug
     end
 
-
+    def highest_grade
+        # byebug
+        student = Student.order(grade: :desc).first
+        render json: student
+    end
 end
